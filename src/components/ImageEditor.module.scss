@@ -1,0 +1,41 @@
+.Image {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #efefef;
+  margin: 0 auto;
+
+  &__button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  &__textPlaceholder {
+    color: #444444;
+  }
+
+  &__image {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    .Image {
+      &__button {
+        visibility: visible;
+      }
+    }
+  }
+}
